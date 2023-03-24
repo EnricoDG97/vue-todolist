@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    padding: .5em;
+}
+
+.delete {
+    display: inline-block;
+    text-decoration: none;  
+    font-family: sans-serif;
+    padding: 2px 4px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
+}

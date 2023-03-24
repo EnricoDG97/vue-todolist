@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo list</title>
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo List - Vue</title>
 </head>
 <body>
+    <!-- vue link -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <div id="app">
+      <div id="app">
+        <h1>
+          To Do List
+        </h1>
+        <ul id="to-do-list">
+          <li v-for="(toDo, index) in toDoElements">
+            <span @click="selectToDo(toDo)" 
+            :style="toDo.done == true ? {textDecoration: 'line-through', color: 'red'} : ''">
+              {{ toDo.text }}
+            </span>
+             - 
+            <span class="delete" @click="deleteToDo(index)">
+              X
+            </span>
+          </li>
+        </ul>
 
+        <input @keyup.enter="addToDo()" type="text" v-model="newToDo.text" placeholder="Scrivi qui nuovo compito">
 
-    </div>
+        <button @click="addToDo()">Add To Do to List</button>
+      </div>
 
-
-    <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
