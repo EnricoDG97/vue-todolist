@@ -14,6 +14,8 @@ createApp({
     methods: {
         addNewToDo: function() {
             this.toDos.push(this.newToDo);
+            this.newToDo="";
         }
+
     }
 }).mount('#app');
