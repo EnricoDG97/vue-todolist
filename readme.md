@@ -1,5 +1,5 @@
-<!-- 
-Descrizione:
+<!--
+ Descrizione:
 Implementare una todolist base. Ogni todo è rappresentato come una stringa all'interno dell'array.
 MILESTONE 1
 Stampare all'interno di una lista, un item per ogni todo.

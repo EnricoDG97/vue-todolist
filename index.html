@@ -21,7 +21,8 @@
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping">New Todo:</span>
                         <input v-model="newToDo" type="text" class="form-control" placeholder="Scrivi qui"
-                            aria-label="toDo" aria-describedby="addon-wrapping">
+                            aria-label="toDo" aria-describedby="addon-wrapping"
+                            @keyup.enter="addNewToDo">
                         <button @click="addNewToDo" type="button" class="btn btn-outline-primary">Aggiungi</button>
                     </div>
                 </div>
