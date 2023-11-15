@@ -16,3 +16,7 @@ li span {
 .fa-solid:hover {
     color: red; 
 }
+
+.completed {
+    text-decoration: line-through;
+}

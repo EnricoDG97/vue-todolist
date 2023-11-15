@@ -30,7 +30,11 @@
             <hr>
             <div class="card">
                 <ul class="list-group list-group-flush">
-                    <li v-for="(toDo, index) in toDos" :key="index" class="list-group-item"> {{ toDos[index] }} 
+                    <li v-for="(toDo, index) in toDos" 
+                        :key="index" class="list-group-item"
+                        :class="{ 'completed': toDo.done }"
+                        @click="changeStatus(index)"> > 
+                            {{ toDo.text }} 
                         <span>
                             <i class="fa-solid fa-square-xmark"
                                 @click="removeToDo(index)"
