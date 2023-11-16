@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping">New Todo:</span>
-                        <input v-model="newToDo" type="text" class="form-control" placeholder="Scrivi qui"
+                        <input v-model.trim="newToDo" type="text" class="form-control" placeholder="Scrivi qui"
                             aria-label="toDo" aria-describedby="addon-wrapping"
                             @keyup.enter="addNewToDo">
                         <button @click="addNewToDo" type="button" class="btn btn-outline-primary">Aggiungi</button>
@@ -37,7 +37,7 @@
                             {{ toDo.text }} 
                         <span>
                             <i class="fa-solid fa-square-xmark"
-                                @click="removeToDo(index)"
+                                @click.stop="removeToDo(index)"
                             ></i>
                         </span>
                     </li>
